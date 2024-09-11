@@ -2,6 +2,7 @@
 /*importa o css*/
 import './App.css'
 
+
 import NavBar from './components/layout/NavBar'
 
 import Container from './components/layout/Container'

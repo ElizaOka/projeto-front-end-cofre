@@ -9,6 +9,7 @@ const CreateDream = () => {
     return (
         <section className={style.create_dream_container}>
             <h1>CRIAR SONHOS</h1>
+            <img src = "./src/assets/sonho2.png"/>
             
             {/* Campo para o sonho */}
             <Input 
