@@ -1,10 +1,6 @@
 
-/*importa o css*/
 import './App.css'
-
-
 import NavBar from './components/layout/NavBar'
-
 import Container from './components/layout/Container'
 import Home from './components/pages/Home'
 import ListExtrat from './components/pages/ListExtrat'
@@ -16,7 +12,7 @@ function App() {
   
   return (
     <>
-      {/* estrutura de navegação */}
+      
       <BrowserRouter>
       <Container>
         <Routes>

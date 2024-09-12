@@ -11,7 +11,6 @@ const CreateDream = () => {
             <h1>CRIAR SONHOS</h1>
             <img src = "./src/assets/sonho2.png"/>
             
-            {/* Campo para o sonho */}
             <Input 
                 type='text'
                 name='txt_sonho'
@@ -19,7 +18,7 @@ const CreateDream = () => {
                 text='Sonho'
             />
             
-            {/* Campo para a descrição do sonho */}
+            
             <Input 
                 type='text'
                 name='txt_descricao_sonho'
@@ -33,13 +32,12 @@ const CreateDream = () => {
                 text='Valor do sonho'
             />
             
-            {/* Select para categoria */}
             <Select 
                 name='categoria'
                 text='Escolha uma categoria de sonho'
             />
 
-            {/* Botão de cadastrar */}
+            
             <Button 
                 rotulo='Cadastrar sonho'
             />
