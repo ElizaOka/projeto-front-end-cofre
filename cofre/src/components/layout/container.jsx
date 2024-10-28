@@ -1,7 +1,7 @@
 import React from "react";
 import style from './Container.module.css'
 
-const Container = ({ children }) => {
+const Container = ({children}) => {
     return (
        <div className={style.container}>
             {children}
@@ -10,3 +10,9 @@ const Container = ({ children }) => {
 }
 
 export default Container
+
+
+
+
+
+

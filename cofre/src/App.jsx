@@ -1,45 +1,52 @@
-
+/* IMPORTA O CSS */
 import './App.css'
-import NavBar from './components/layout/NavBar'
+
+//IMPORTA O COMPONENTE CONTAINER
 import Container from './components/layout/Container'
-import Home from './components/pages/Home'
-import ListExtrat from './components/pages/ListExtrat'
-import CreateDream from './components/pages/CreateDream'
 
+//IMPORTA O COMPONENTE NAVBAR
+import NavBar from './components/layout/NavBar'
+
+// IMPORTA OS COMPONENTES DE NAVEGAÇÃO DA APLICAÇÃO
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import axios from 'axios'
-// import { } from 'express'
 
-const server = axios.create({
-  baseURL: 'http://localhost:3001'
-})
+//
+import Home from './components/pages/Home'
+
+import CreateDream from './components/pages/CreateDream' 
+
+import ListExtrat from './components/pages/ListExtrat' 
+import DetailDream from './components/pages/DetailDream'
+
 
 function App() {
-
-  server.get ('/').then((response)=>{
-    console.log(response)
-  }).catch(error => {
-    console.error('Erro ao buscar dados:', error)
-  })
-  
+ 
+ 
   return (
     <>
-      
-      <BrowserRouter>
-      <Container>
-        <Routes>
-          <Route path='/' element={<NavBar/>}>
-            <Route path= '/'  element ={<Home/>}/>
-              <Route path='/listExtrat' element ={<ListExtrat/>}/>
-              <Route path='/createDream' element ={<CreateDream/>}/>
 
-          </Route>
-        </Routes>
-      </Container>
-      </BrowserRouter>
-      
+      {/* ESTRUTURA DE NAVEGAÇÃO */}
+        <BrowserRouter>
+
+          <Container>
+
+            <Routes>
+
+              <Route path='/' element={<NavBar />}>
+                <Route path='/' element={<Home />}/>
+                <Route path='/ListExtrat' element={<ListExtrat />}/>
+                <Route path='/CreateDream' element={<CreateDream />}/>
+                <Route path='/DetailDream/:cod_sonho' element={<DetailDream />}/>
+              </Route>
+
+            </Routes>
+
+          </Container>
+
+        </BrowserRouter>
+
     </>
   )
 }
-
+ 
 export default App
