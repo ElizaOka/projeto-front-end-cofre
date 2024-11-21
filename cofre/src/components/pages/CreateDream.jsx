@@ -121,7 +121,7 @@ const CreateDream = () => {
                     name='categoria'
                     text='Escolha uma categoria '
                     options={categorias}
-                    handlerChangeCategory={handlerChangeCategory}
+                    handlerChangeCategoryProp={handlerChangeCategory}
                 />
 
                 <Button

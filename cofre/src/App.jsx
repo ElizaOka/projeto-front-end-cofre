@@ -17,6 +17,8 @@ import CreateDream from './components/pages/CreateDream'
 
 import ListExtrat from './components/pages/ListExtrat' 
 import DetailDream from './components/pages/DetailDream'
+import DeleteDream from './components/pages/DeleteDream'
+import UpdateDream from './components/pages/UpdateDream'
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
                 <Route path='/ListExtrat' element={<ListExtrat />}/>
                 <Route path='/CreateDream' element={<CreateDream />}/>
                 <Route path='/DetailDream/:cod_sonho' element={<DetailDream />}/>
+                <Route path='/deleteDream/:cod_sonho' element={<DeleteDream />}/>
+                <Route path='/updateDream/:cod_sonho' element={<UpdateDream />}/>
               </Route>
 
             </Routes>

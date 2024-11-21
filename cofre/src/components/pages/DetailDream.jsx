@@ -45,11 +45,15 @@ const DetailDream = () => {
                 </span>
                 <div className={style.container_buttons}>
                     <Button 
-                        label='EDITAR'
+                        label='EDIT'
+                        router='/updatedream/'
+                        cod_sonho={dream.cod_sonho}
                     />
 
                     <Button 
-                        label='EXCLUIR'
+                        label='DELETE'
+                        router='/deleteDream/'
+                        cod_sonho={dream.cod_sonho}
                     />
 
                 </div>
