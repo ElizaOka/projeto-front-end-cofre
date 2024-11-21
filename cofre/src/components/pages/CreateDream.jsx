@@ -98,7 +98,7 @@ const CreateDream = () => {
                     name='nome_sonho'
                     placeHolder='Digite seu sonho aqui'
                     text='Sonho'
-                    handlerChangeDreamProp={handlerChangeDream}
+                    handlerChangeDream={handlerChangeDream}
                 />
 
                 <Input
@@ -106,7 +106,7 @@ const CreateDream = () => {
                     name='valor_sonho'
                     placeHolder='Digite o valor'
                     text='Valor'
-                    handlerChangeDreamProp={handlerChangeDream}
+                    handlerChangeDream={handlerChangeDream}
                 />
 
                 <Input
@@ -114,14 +114,14 @@ const CreateDream = () => {
                     name='descricao_sonho'
                     placeHolder='Digite a descrição do sonho'
                     text='Descrição do sonho'
-                    handlerChangeDreamProp={handlerChangeDream}
+                    handlerChangeDream={handlerChangeDream}
                 />
 
                 <Select
                     name='categoria'
                     text='Escolha uma categoria '
                     options={categorias}
-                    handlerChangeCategoryProp={handlerChangeCategory}
+                    handlerChangeCategory={handlerChangeCategory}
                 />
 
                 <Button

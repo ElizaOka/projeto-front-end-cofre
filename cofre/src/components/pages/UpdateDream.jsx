@@ -128,28 +128,28 @@ const UpdateDream = () => {
                                         name='nome_sonho'
                                         placeHolder='Digite seu sonho'
                                         text='Sonho'
-                                        handlerChangeDreamProp={handlerChangeDream}/>
+                                        handlerChangeDream={handlerChangeDream}/>
 
                                 <Input 
                                         type='text'
                                         name='valor_sonho'
                                         placeHolder='Digite o valor'
                                         text='Valor'
-                                        handlerChangeDreamProp={handlerChangeDream}/>
+                                        handlerChangeDream={handlerChangeDream}/>
 
                                 <Input 
                                         type='text'
                                         name='descricao_sonho'
                                         placeHolder='Digite a descrição do sonho aqui'
                                         text='Descrição do Sonho'
-                                        handlerChangeDreamProp={handlerChangeDream}
+                                        handlerChangeDream={handlerChangeDream}
                                     />
                                 
                                 <Select 
                                         name="categoria_id"
                                         text="Selecione a categoria do livro"
                                         options={categorias}
-                                        handleChangeCategoryProp={handleChangeCategory} />
+                                        handleChangeCategory={handleChangeCategory} />
 
                                 <Button 
                                 rotulo='Editar Sonho'/>
