@@ -98,6 +98,7 @@ const CreateDream = () => {
                     name='nome_sonho'
                     placeHolder='Digite seu sonho aqui'
                     text='Sonho'
+                    value={dream.nome_sonho || ''}
                     handlerChangeDream={handlerChangeDream}
                 />
 
@@ -106,6 +107,7 @@ const CreateDream = () => {
                     name='valor_sonho'
                     placeHolder='Digite o valor'
                     text='Valor'
+                    value={dream.valor_sonho || ''}
                     handlerChangeDream={handlerChangeDream}
                 />
 
@@ -114,6 +116,7 @@ const CreateDream = () => {
                     name='descricao_sonho'
                     placeHolder='Digite a descrição do sonho'
                     text='Descrição do sonho'
+                    value={dream.descricao_sonho || ''}
                     handlerChangeDream={handlerChangeDream}
                 />
 
@@ -121,6 +124,7 @@ const CreateDream = () => {
                     name='categoria'
                     text='Escolha uma categoria '
                     options={categorias}
+                    value={dream.cod_categoria || ''}
                     handlerChangeCategory={handlerChangeCategory}
                 />
 

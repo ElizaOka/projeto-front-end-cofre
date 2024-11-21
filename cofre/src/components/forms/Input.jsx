@@ -1,5 +1,5 @@
 import styles from './Input.module.css'
-function Input({type, text, placeHolder, name,handlerChangeDream}){
+function Input({type, text, placeHolder, name,handlerChangeDream, value}){
 
     return(
         <div className={styles.form_control}>
@@ -9,6 +9,7 @@ function Input({type, text, placeHolder, name,handlerChangeDream}){
             name={name}
             id={name}
             placeholder={placeHolder}
+            value ={value || ''}
             onChange={handlerChangeDream}/>
         </div>
     )

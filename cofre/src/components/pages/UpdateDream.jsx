@@ -63,23 +63,26 @@ const UpdateDream = () => {
         useEffect(()=>{
 
                 fetch(`http://localhost:5000/listarSonho/${cod_sonho}`, {
-                method: 'GET',
-                mode:'cors',
-                headers:{
-                        'Content-Type':'application/json',
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Headers': '*'
-                },
-                })
-                .then((resp)=>resp.json())
-                .then((data)=>{
-                        console.log('SONHOS: ' + data.data.cod_sonho);
-                        setDream(data.data);
-                        console.log('STATE: ' + dream.nome_sonho);
-                })
-                .catch((err)=>{console.log(err)});
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json' },
+})
+    .then((resp) => resp.json())
+    .then((data) => {
+        console.log('Dados retornados pela API:', data); // Inspecione a estrutura aqui
+        if (data && data.data) {
+            setDream(data.data); // Atualize o estado apenas se a propriedade existir
+            console.log('STATE atualizado:', data.data);
+        } else {
+            console.error('Estrutura inesperada na resposta da API.');
+        }
+    })
+    .catch((err) => console.log('Erro ao buscar os dados do sonho:', err));
 
         }, []);
+
+        useEffect(() => {
+                console.log('Dream atualizado:', dream); // Monitore mudanças no estado
+            }, [dream]);
 
         /* ALTERAÇÃO DOS DADOS DE SONHO */
         function updateDream(dream) {
@@ -128,6 +131,8 @@ const UpdateDream = () => {
                                         name='nome_sonho'
                                         placeHolder='Digite seu sonho'
                                         text='Sonho'
+                                        value={dream.nome_sonho || ''}
+                                        
                                         handlerChangeDream={handlerChangeDream}/>
 
                                 <Input 
@@ -135,6 +140,8 @@ const UpdateDream = () => {
                                         name='valor_sonho'
                                         placeHolder='Digite o valor'
                                         text='Valor'
+                                        value={dream.valor_sonho || ''}
+                                        
                                         handlerChangeDream={handlerChangeDream}/>
 
                                 <Input 
@@ -142,13 +149,17 @@ const UpdateDream = () => {
                                         name='descricao_sonho'
                                         placeHolder='Digite a descrição do sonho aqui'
                                         text='Descrição do Sonho'
+                                        value={dream.descricao_sonho || ''}
+                                        
                                         handlerChangeDream={handlerChangeDream}
                                     />
                                 
                                 <Select 
                                         name="categoria_id"
-                                        text="Selecione a categoria do livro"
+                                        text="Selecione a categoria do sonho"
                                         options={categorias}
+                                        value={dream.cod_categoria || ''}
+                                        
                                         handleChangeCategory={handleChangeCategory} />
 
                                 <Button 
